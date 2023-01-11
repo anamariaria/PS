@@ -30,4 +30,16 @@ int main() {
 	i = 1;
 	while (solution_count < 92)
 	{
+		for (; i <= n; i++)
+		{
+			conflict = check(i, R[i]);
+			if (conflict != 0)
+				R[i] = conflict;
+			else
+			{
+				R[i] = 1;  // Seteaza pozitia curenta a reginei pe 1
+				R[i - 1] = R[i - 1] + 1; // Incrementeaza pozitia reginei din pozitia anterioara
+				i = i - 2; // Decrementeaza valoarea lui i cu 2
+			}
+		}
 }
