@@ -65,4 +65,12 @@ int main() {
 		printf("%d]", R[n]);
 		getch();
 
+		system("CLS");
+
+		R[n] = R[n] + 1; // Incrementeaza pozitia ultimei regine
+		i = n; // Seteaza i la ultima pozitie a tablei de sah
+
+
+	}
+
 }
